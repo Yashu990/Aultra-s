@@ -3,11 +3,12 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  { label: 'Our Story', to: '/about' },
   { label: 'Solutions', to: '/solutions' },
-  { label: 'Products', to: '/products' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Product Catalog', to: '/products' },
+  { label: 'Project Gallery', to: '/projects' },
+  { label: 'Our Clients', to: '/clients' },
+  { label: 'Contact Us', to: '/contact' },
 ]
 
 export default function Navbar() {
@@ -41,7 +42,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               <NavLink
                 key={link.label}
