@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050A18;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080F1F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-semibold px-6 py-3 rounded-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] tracking-wider text-sm uppercase;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-navy-950 font-semibold px-6 py-3 rounded-sm transition-all duration-300 tracking-wider text-sm uppercase;
+  }
+
+  .section-label {
+    @apply text-gold-400 text-xs font-semibold tracking-[0.3em] uppercase mb-3;
+  }
+
+  .section-title {
+    @apply font-display text-3xl lg:text-5xl font-bold text-white leading-tight;
+  }
+
+  .card-dark {
+    @apply bg-navy-800 border border-white/5 hover:border-gold-400/30 transition-all duration-500 p-6 rounded-sm;
+  }
+
+  .divider-gold {
+    @apply w-12 h-0.5 bg-gold-400 my-5;
+  }
+
+  .nav-link {
+    @apply text-steel-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4AF37, #f5e27c, #C9A02A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px rgba(212,175,55,0.2), 0 0 30px rgba(212,175,55,0.05);
+  }
+}
